@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <TextView 
+        android:id="@+id/tx_productId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text=" "
+        />
+    <TextView 
+        android:id="@+id/tx_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_productId"
+        android:text="维修时间"
+        />
+    <EditText 
+        android:id="@+id/e_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_time"
+        />
+     <TextView 
+        android:id="@+id/tx_person"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/e_time"
+        android:text="维修人员"
+        />
+    <EditText 
+        android:id="@+id/e_person"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_person"
+        />
+     <TextView 
+        android:id="@+id/tx_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/e_person"
+        android:text="联系方式"
+        />
+    <EditText 
+        android:id="@+id/e_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_contact"
+        />
+     <TextView 
+        android:id="@+id/tx_log"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/e_contact"
+        android:text="维修日志"
+        />
+    <EditText 
+        android:id="@+id/e_log"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_log"
+        />
+    <Button 
+        android:id="@+id/B_addLog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/B_addLog"
+        />
+
+</RelativeLayout>

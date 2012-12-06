@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">demo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <color name="title">#000</color>
+
+    <string name="title_Scanner">Scanner</string>
+    <string name="title_activity_scanner">Scanner</string>
+    <string name="B_scan">开始扫描</string>
+    <string name="scanResult">无</string>
+    <string name="B_showData">查询信息</string>
+    <string name="title_activity_query">Query</string>
+    <string name="B_maintain">新增维护信息</string>
+    <string name="B_addEquip">新增设备信息</string>
+    <string name="B_wifion">开启Wifi</string>
+    <string name="B_wifioff">关闭Wifi</string>
+    <string name="title_activity_add_log">AddLog</string>
+    <string name="B_addLog">上传维修日志</string>
+
+</resources>

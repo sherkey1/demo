@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView 
+        android:id="@+id/title"
+        android:text="设备管理系统"
+        android:textStyle="bold"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30dp"
+        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+      	android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView 
+        android:id="@+id/userNameLB"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="用户名："
+        android:layout_below="@id/title"
+        />
+    <EditText 
+        android:id="@+id/e_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userNameLB"
+        />
+    <TextView 
+        android:id="@+id/tx_pwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/e_username"
+        android:text="密码："
+        />
+    <EditText 
+        android:id="@+id/e_pwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_pwd"
+        />
+    <Button 
+        android:id="@+id/B_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/e_pwd"
+        android:text="登入"
+        />
+     <Button 
+        android:id="@+id/B_wifiOff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/B_wifioff"
+        android:layout_alignParentBottom="true"
+        />
+    <Button 
+        android:id="@+id/B_wifiOn"
+        android:text="@string/B_wifion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+     	android:layout_above="@id/B_wifiOff"
+        />
+   
+
+</RelativeLayout>

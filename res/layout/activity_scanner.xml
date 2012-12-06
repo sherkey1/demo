@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+    <TextView 
+        android:id="@+id/tx_scan"
+        android:text="扫描的结果为："
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+    <TextView 
+        android:id="@+id/tx_scanResult"
+        android:text="@string/scanResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_scan"
+        />
+    
+    
+    <Button 
+        android:id="@+id/B_scanner"
+        android:text="@string/B_scan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_scanResult"
+        />
+    <Button 
+        android:id="@+id/B_showData"
+        android:text="@string/B_showData"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/B_scanner"
+        />
+    <Button 
+        android:id="@+id/B_maintain"
+        android:text="@string/B_maintain"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/B_showData"
+        />
+	<Button
+	    android:id="@+id/B_addEquip"
+	    android:text="@string/B_addEquip"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/B_maintain"
+	    />
+</RelativeLayout>
