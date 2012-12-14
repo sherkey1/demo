@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login" >
+    
+
+    <Button 
+        android:id="@+id/B_disableReminder"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="取消提醒"
+        />
+    <Button 
+        android:id="@+id/B_enableReminder"
+        android:layout_above="@id/B_disableReminder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="设置提醒"
+        />
+
+    <TextView 
+        android:text="相隔？年"
+        android:id="@+id/tx_spinnerYear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+    <Spinner 
+        android:id="@+id/spinner_year"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_spinnerYear"
+        />
+    <TextView 
+        android:id="@+id/tx_spinnerMonth"
+        android:text="相隔？月"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_year"
+        
+        />
+    <Spinner 
+        android:id="@+id/spinner_month"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_spinnerMonth"
+        />
+    <TextView 
+        android:id="@+id/tx_spinnerDay"
+        android:text="相隔？天"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_month"
+        />
+    <Spinner 
+        android:id="@+id/spinner_Day"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_spinnerDay"
+        />
+
+</RelativeLayout>

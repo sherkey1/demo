@@ -7,6 +7,7 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.apache.http.HttpEntity;
@@ -22,10 +23,14 @@ import org.apache.http.protocol.HTTP;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +40,7 @@ public class AddLog extends Activity {
 	TextView tx_productId;
 	EditText e_log,e_time,e_person,e_contact;
 	Button b_addLog;
+	int mDay,mMonth,mYear;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +56,13 @@ public class AddLog extends Activity {
         e_time=(EditText)findViewById(R.id.e_time);
         e_person=(EditText)findViewById(R.id.e_person);
         e_contact=(EditText)findViewById(R.id.e_contact);
+        
+        //初始化时间 
+        Calendar calendar;
+        calendar=Calendar.getInstance();
+        mYear=calendar.get(Calendar.YEAR);
+        mMonth=calendar.get(Calendar.MONTH);
+        mDay=calendar.get(Calendar.DAY_OF_MONTH);
         
         
         b_addLog=(Button)findViewById(R.id.B_addLog);
@@ -67,6 +80,15 @@ public class AddLog extends Activity {
 				{
 					showFailed();
 				}
+			}
+		});
+        e_time.setInputType(InputType.TYPE_NULL);
+        e_time.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				showDialog(0);
+				
 			}
 		});
     }
@@ -148,4 +170,44 @@ public class AddLog extends Activity {
     {
     	Toast.makeText(getApplicationContext(), "上传被拒绝，请联系管理员", Toast.LENGTH_SHORT).show();
     }
+    protected Dialog onCreateDialog(int id) {
+        switch (id) {  
+            case 0:
+                return new DatePickerDialog(this, mDateSetListener, mYear, mMonth, mDay);
+            case 1:
+                return new DatePickerDialog(this, mDateSetListener, mYear, mMonth, mDay);
+        }
+        return null;
+    }
+    private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            mYear = year;
+            String mm;
+            String dd;
+             
+            if (monthOfYear < 9) {
+                mMonth = monthOfYear + 1;
+                mm = "0" + mMonth;
+            }
+            else {
+                mMonth = monthOfYear + 1;
+                mm = String.valueOf(mMonth);
+            }
+             
+            if (dayOfMonth <= 9) {
+                mDay = dayOfMonth;
+                dd = "0" + mDay;
+            }
+            else{
+                mDay = dayOfMonth;
+                dd = String.valueOf(mDay);
+            }
+             
+            mDay = dayOfMonth;
+             
+            
+                e_time.setText(String.valueOf(mYear) + "-" + mm + "-" + dd);
+           
+        }
+    };
 }

@@ -51,6 +51,29 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MyAlarm"
+            android:label="@string/title_activity_my_alarm" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HandleAlarm"
+            android:label="@string/title_activity_handle_alarm" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".MyReceiver">
+            <intent-filter >
+                <action android:name="com.example.demo.MyReceiver"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
