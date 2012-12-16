@@ -36,7 +36,7 @@ public class MyAlarm extends Activity {
 	public static final long INTERVAL_MONTH = 86400000L*30;
 	public static final long INTERVAL_YEAR = 86400000L*30*12;
 	public static long time=0L;
-	long triggerAtTime = SystemClock.elapsedRealtime() + 20 * 1000;  
+	long triggerAtTime = SystemClock.elapsedRealtime() + 30 * 1000;  
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
