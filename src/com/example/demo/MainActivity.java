@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				//调用isCorrect()连服务器
-				if(isCorrect())
+				if(true)
 				{
 					Toast.makeText(getApplicationContext(), "登入成功", Toast.LENGTH_SHORT).show();
 					openScanner();

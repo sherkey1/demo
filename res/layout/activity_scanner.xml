@@ -56,4 +56,18 @@
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentBottom="true"
 	    />
+	<Button 
+	    android:id="@+id/B_ftp"
+	    android:text="下载资料"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@id/B_reminder"
+	    />
+	<Button 
+	    android:id="@+id/B_lookData"
+	    android:text="查看资料"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@id/B_ftp"
+	    />
 </RelativeLayout>

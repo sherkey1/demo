@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+     android:background="@drawable/login">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dip" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tx_addEquip_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="产品编号" />
+
+            <EditText
+                android:id="@+id/e_addEquip_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_id" />
+
+            <TextView
+                android:id="@+id/tx_addEquip_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_id"
+                android:text="产品型号" />
+
+            <EditText
+                android:id="@+id/e_addEquip_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_type" />
+
+            <TextView
+                android:id="@+id/tx_addEquip_department"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_type"
+                android:text="所属科室" />
+
+            <EditText
+                android:id="@+id/e_addEquip_department"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_department" />
+
+            <TextView
+                android:id="@+id/tx_addEquip_manufacturer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_department"
+                android:text="生产厂家" />
+
+            <EditText
+                android:id="@+id/e_addEquip_manufacturer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_manufacturer" />
+
+            <TextView
+                android:id="@+id/tx_addEquip_vendor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_manufacturer"
+                android:text="销售厂商" />
+
+            <EditText
+                android:id="@+id/e_addEquip_vendor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_vendor" />
+
+            <TextView
+                android:id="@+id/tx_addEquip_protime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_vendor"
+                android:text="生产时间" />
+
+            <EditText
+                android:id="@+id/e_addEquip_protime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_protime"
+                android:inputType="none" />
+
+            <TextView
+                android:id="@+id/tx_addEquip_antime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_protime"
+                android:text="安装时间" />
+
+            <EditText
+                android:id="@+id/e_addEquip_antime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_antime" 
+                android:inputType="none"/>
+
+            <TextView
+                android:id="@+id/tx_addEquip_anperson"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_antime"
+                android:text="安装人员" />
+
+            <EditText
+                android:id="@+id/e_addEquip_anperson"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_anperson" />
+
+            <TextView
+                android:id="@+id/tx_addEquip_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/e_addEquip_anperson"
+                android:text="联系方式" />
+
+            <EditText
+                android:id="@+id/e_addEquip_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_addEquip_contact" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-50dip"
+        android:gravity="bottom" >
+
+        <Button
+            android:id="@+id/B_addEquip_done"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="完成" />
+    </RelativeLayout>
+
+</LinearLayout>
