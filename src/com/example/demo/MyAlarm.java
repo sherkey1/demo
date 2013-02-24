@@ -108,7 +108,7 @@ public class MyAlarm extends Activity {
         enableReminder.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-//				triggerAtTime=triggerAtTime+year*INTERVAL_YEAR+month*INTERVAL_MONTH+day*INTERVAL_DAY;
+				triggerAtTime=triggerAtTime+year*INTERVAL_YEAR+month*INTERVAL_MONTH+day*INTERVAL_DAY;
 				
 				setReminder(true);
 				Toast.makeText(MyAlarm.this, "您已设置对该设备的提醒于"+year+"年"+month+"月"+day+"天之后", Toast.LENGTH_SHORT).show();

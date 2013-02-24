@@ -130,7 +130,8 @@
                 android:id="@+id/e_addEquip_contact"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tx_addEquip_contact" />
+                android:layout_below="@id/tx_addEquip_contact" 
+                android:numeric="integer"/>
         </RelativeLayout>
     </ScrollView>
 

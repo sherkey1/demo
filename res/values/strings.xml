@@ -22,5 +22,6 @@
     <string name="title_activity_my_alarm">设置时间间隔</string>
     <string name="title_activity_handle_alarm">维修提醒</string>
     <string name="title_activity_add_equip">AddEquip</string>
+    <color name="button">#ef4136</color>
 
 </resources>

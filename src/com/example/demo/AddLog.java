@@ -41,11 +41,14 @@ public class AddLog extends Activity {
 	EditText e_log,e_time,e_person,e_contact;
 	Button b_addLog;
 	int mDay,mMonth,mYear;
+	String IPADDRESS=null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_log);
+        
+        IPADDRESS=this.getIntent().getExtras().getString("IPADDRESS");
         
         id=this.getIntent().getExtras().getString("id");
         tx_productId=(TextView)findViewById(R.id.tx_productId);
@@ -71,10 +74,9 @@ public class AddLog extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				getData();
-				if(isAllowed())
+				if(true)
 				{
 					insertToMysql();
-					showSuccess();
 				}
 				else
 				{
@@ -132,7 +134,7 @@ public class AddLog extends Activity {
     }
     private void insertToMysql()
     {
-    	String url="http://211.87.234.88:8080/Server/servlet/addlog";
+    	String url=IPADDRESS+"/Server/servlet/addlog";
 		
 		
 		NameValuePair value1=new BasicNameValuePair("product", id);
@@ -155,11 +157,12 @@ public class AddLog extends Activity {
 			post.setEntity(requestEntity);
 			
 			HttpResponse response=client.execute(post);
-			
+			showSuccess();
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
+			Toast.makeText(getApplicationContext(), "连接不到服务器", Toast.LENGTH_SHORT).show();
 		}
     }
     private void showSuccess()

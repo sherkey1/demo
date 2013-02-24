@@ -41,6 +41,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tx_pwd"
+        android:password="true"
         />
     <Button 
         android:id="@+id/B_login"

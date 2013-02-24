@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 	WifiManager wifimanager;
 	Button login,wifiOn,wifiOff;
 	EditText e_user,e_pwd;
+	String IPADDRESS="http://211.87.234.88:8080";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,7 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				//调用isCorrect()连服务器
-				if(true)
+				if(isCorrect())
 				{
 					Toast.makeText(getApplicationContext(), "登入成功", Toast.LENGTH_SHORT).show();
 					openScanner();
@@ -65,7 +66,7 @@ public class MainActivity extends Activity {
 
 			private boolean isCorrect() {
 				// TODO Auto-generated method stub
-				String url="http://211.87.234.88:8080/Server/servlet/login";
+				String url=IPADDRESS+"/Server/servlet/login";
 				String out = null;
 				//拿到用户名和密码
 		        String name=e_user.getText().toString();
@@ -91,7 +92,7 @@ public class MainActivity extends Activity {
 				}
 				catch(Exception e )
 				{
-					Toast.makeText(MainActivity.this, "网络连接失败", Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainActivity.this, "未到连接到服务器", Toast.LENGTH_SHORT).show();
 					e.printStackTrace();
 				}
 				return(out.equals("success"));
@@ -99,9 +100,14 @@ public class MainActivity extends Activity {
 
 			private void openScanner() {
 				// TODO Auto-generated method stub
-				String actionName="android.intent.action.Scanner";
-				Intent intent=new Intent(actionName);
-				MainActivity.this.startActivity(intent);
+//				String actionName="android.intent.action.Scanner";
+//				Intent intent=new Intent(actionName);
+//				MainActivity.this.startActivity(intent);
+				
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this, Scanner.class);
+				intent.putExtra("IPADDRESS", IPADDRESS);
+				startActivity(intent);
 				
 			}
 		});

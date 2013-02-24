@@ -51,6 +51,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tx_contact"
+        android:numeric="integer"
         />
      <TextView 
         android:id="@+id/tx_log"

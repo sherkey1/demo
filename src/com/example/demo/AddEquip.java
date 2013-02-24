@@ -46,11 +46,14 @@ public class AddEquip extends Activity {
 	Button b_addEquip;
 	
 	int mDay,mMonth,mYear;
+	String IPADDRESS=null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_equip);
+		
+		IPADDRESS=this.getIntent().getExtras().getString("IPADDRESS");
 		
 		//初始化时间 
         Calendar calendar;
@@ -145,7 +148,7 @@ public class AddEquip extends Activity {
 	}
 	private void insertIntoMysql()
 	{
-		String url="http://211.87.234.88:8080/Server/servlet/newequip";
+		String url=IPADDRESS+"/Server/servlet/newequip";
 		
 		
 		NameValuePair value1=new BasicNameValuePair("id", id);

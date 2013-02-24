@@ -17,11 +17,14 @@ public class Scanner extends Activity {
 	Button b_scan, b_query, b_addEquip, b_maintance, b_reminder,b_ftp,b_lookData;
 	TextView result;
 	public String text_result = null;
+	String IPADDRESS=null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_scanner);
+		
+		IPADDRESS=this.getIntent().getExtras().getString("IPADDRESS");
 
 		// 处理扫描按钮
 		b_scan = (Button) findViewById(R.id.B_scanner);
@@ -50,7 +53,7 @@ public class Scanner extends Activity {
 				// startActivity(intent);
 				if (text_result != null) {
 					Intent intent = new Intent(Intent.ACTION_VIEW);
-					String url = "http://211.87.234.88:8080/Server/servlet/show?id=";
+					String url =IPADDRESS+"/Server/servlet/show?id=";
 					url = url + text_result;
 					intent.setData(Uri.parse(url));
 					startActivity(intent);
@@ -74,6 +77,7 @@ public class Scanner extends Activity {
 				// 直接用手机来处理
 				Intent intent = new Intent();
 				intent.setClass(Scanner.this, AddEquip.class);
+				intent.putExtra("IPADDRESS", IPADDRESS);
 				startActivity(intent);
 			}
 		});
@@ -88,6 +92,7 @@ public class Scanner extends Activity {
 					Intent intent = new Intent();
 					intent.setClass(Scanner.this, AddLog.class);
 					intent.putExtra("id", text_result);
+					intent.putExtra("IPADDRESS", IPADDRESS);
 					startActivity(intent);
 				} else {
 					Toast.makeText(Scanner.this, "请先进行设备扫描", Toast.LENGTH_SHORT)
